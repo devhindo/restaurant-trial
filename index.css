@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    background-color: #202020;
+}
+
+header {
+    background-color: #202020;
+    color: rgb(235, 232, 232);
+}
+
+.containerr {
+    width: 80%;
+    margin : 0 auto;
+}
+ul {
+    padding: 0;
+}
+
+/* svg adjusting */
+.logo {
+    width: 100px;
+    padding: 0 30px;
+}
+
+.a-search {
+    display: flex;
+}
+
+.search {
+    width: 29px;
+}
+
+.buttons {
+    display: flex;
+    margin-right: 8px;
+}
+
+/* buttons */
+.btn {
+    text-decoration: none;
+    margin: 0 2px;
+    padding: 10px 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.login {
+    border: 1px solid white;
+}
+
+.register {
+    background-color: #ECC40F;
+}
+
+
+/* flexbox-1 */
+.nav-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+
+.contact {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media (max-width:880px) {
+    .contact {
+    border-top: 1px solid #ffffff;
+    flex-grow: 1;
+}
+.containerr {
+    width: 90%;
+    margin : 0 auto;
+}
+    
+}
+@media (max-width: 530px) {
+    .location {
+        display: none;
+    }
+}
+.contact li {
+    padding: 10px;
+}
+
+@media screen and (max-width: 960px) {
+    .nav-1 {
+        flex-wrap: wrap;
+    }
+
+    .contact {
+        order: 2;
+    }
+    .search {
+        display: none;
+    }
+    .buttons {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .search {
+        top: 5px;
+    }
+}
+
+
+
+
+
+/* nav -2  */
+.nav-2 {
+    border-top: 1px solid #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #505050;
+}
+
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li {
+        flex-basis: 170px;
+    }
+
+
+.grid-layout {
+    margin: 30px 50px 50px 50px;
+    color: white;
+    height: auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    '. text text text text'
+    'arrows text text text text'
+    'arrows text text text text'
+    '. text text text text'
+}
+.text {
+    grid-area: text;
+    grid-column: span 4;
+}
+
+.burger {
+    grid-area: burger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.burger-img {
+   display: none;
+}
+
+
+.header {
+    font-size: 50px;
+}
+
+.details {
+    font-weight: 100;
+
+}
+
+.order-btn {
+    margin-top: 40px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    outline: 1px solid white;
+}
+.order {
+    margin-bottom: 20px;
+
+}
+@media screen and (min-width: 1050px) {
+    .header {
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .burger-img {
+        display: inherit;
+        width: 122%;
+        margin-top: 40px;
+        margin-left: 40px;
+        border-radius: 30px;
+    }
+    .grid-layout {
+        height: 341px;
+        padding: 0 50px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-areas:
+            ' . text text text text . burger burger burger burger'
+            ' . text text text text . burger burger burger burger'
+            ' . text text text text . burger burger burger burger'
+            ' arrows text text text text . burger burger burger burger'
+            ' arrows text text text text . burger burger burger burger'
+            ' . text text text text . burger burger burger burger'
+            ' . text text text text . burger burger burger burger'
+            ' . text text text text . burger burger burger burger'
+            ' . text text text text . burger burger burger burger'
+            ' . . . . . . burger burger burger burger'
+            ' . . . . . . burger burger burger burger'
+            ' . . . . . . burger burger burger burger';
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .contact {
+        display: none;
+    }
+    .header {
+        font-size: 2rem;
+    }
+    .details {
+        font-size: 13px;
+    }
+    .grid-layout {
+        height: 400px;
+    }
+   
+}
+@media (max-width: 1050px) {
+    .contact-header {
+        display: none;
+    }
+}
+@media (min-height: 700px) {
+    .burger-img {
+        width: 100%;
+    }
+}
